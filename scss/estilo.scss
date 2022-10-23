@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+}
+@import "variables";
+@import "mixin";
+@import "fuentes";
+@import "titulos";
+
+body{
+    background-image: url(../assets/main_background_leave.jpg);
+    background-color: $beigeclaro;
+    font-family: "Quicksand-Regular";
+}
+header nav {
+    font-size: 1.5rem;
+    font-weight: bold;
+    .logo{
+        width: 3rem;
+        border-radius: 15%;
+    }
+    .nav-item{
+        margin: 0.2rem;
+    }
+    .nav-item:hover{
+        background-color:#6d9e55b0;
+        border-radius: 5px;
+        color: #FBFCE6; /*No logre identificar por que no toma el color en el hover*/
+    }
+}
+
+.intro_container{
+    display: flex;
+    position: relative;
+    background-image: url(../assets/serv_2.jpg);
+    width: 100%;
+    margin: 0 auto;
+    background-attachment: fixed;   
+    background-size: cover;
+    padding: 1rem;
+    text-align: center;
+      .intro__div{
+        width: 40%;
+        background-color: rgba(255, 255, 255, 0.651);
+        padding: 1rem;
+        transition: all 1s;
+        line-height: 1.8;
+    }
+    .intro__div:hover{
+        background-color:#6D9E55;
+        color: #FBFCE6;
+    }
+}
+
+main{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 1.5rem;
+    .serv1{
+        @include servicios;
+    }
+    .serv2{
+        @include servicios;
+    }
+    .serv3{
+        @include servicios;
+    }
+    .serv4{
+        @include servicios;
+    }
+    .serv5{
+        @include servicios;
+    }
+    .serv6{
+        @include servicios;
+    }
+}
+
